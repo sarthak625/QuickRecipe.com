@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <% include partials/head %>
+  </head>
+  <body>
+
+    <ul>
+        <% data.forEach(function(recipe){ %>
+          <li>
+          <div class="recipe_element">
+            <h1><%=recipe.title%></h1>
+            <img src="<%=recipe.image_url%>"></img>
+            <div>Published By <%= recipe.publisher %></div>
+            <div><a href="<%=recipe.f2f_url%>">Go to recipe</a></div>
+          </div>
+          </li>
+        <% }) %>
+
+    </ul>
+  </body>
+  <% include partials/footer %>
+</html>
