@@ -10,6 +10,9 @@ var page = 1;
 //Set the view engine
 app.set('view engine','ejs');
 
+//The express and static paths are in the public directory
+app.use(express.static(path.join(__dirname,'public')));
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/',function(req,res){
