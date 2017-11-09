@@ -2,6 +2,7 @@ var express    = require('express');
 var request    = require('request');
 var bodyParser = require('body-parser');
 var app        = express();
+var path       = require('path');
 
 var api_key = 'bf0ea69d36a82e81cdd7ff3537e67913';
 var search  = 'shredded%20chicken';
