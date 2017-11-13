@@ -8,16 +8,16 @@ var tagSchema = new mongoose.Schema({
       required: [true, 'Tag is required'],
       unique: true
   },
-  searchNumber: {
-      type: Number,
-      default: 0
-  },
-  previousData: [
-    {
-      date: {type: Date, default: Date.now()},
-      searchNumber: Number
-    }
-  ]
+  // searchNumber: {
+  //     type: Number,
+  //     default: 0
+  // },
+  // previousData: [
+  //   {
+  //     date: {type: Date, default: Date.now()},
+  //     searchNumber: Number
+  //   }
+  // ]
 });
 
 tagSchema.index({'$**': 'text'});
