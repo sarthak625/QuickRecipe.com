@@ -27,8 +27,13 @@ app.use(express.static(path.join(__dirname,'public')));
 //Configure to use body parser
 app.use(bodyParser.urlencoded({extended: true}));
 
-//The home directory
+//Home url
 app.get('/',function(req,res){
+  res.render('landing');
+});
+
+//The search url
+app.get('/search',function(req,res){
   Tags.find({}, { _id: 0, tag: 1 }, function(err, foundTags){
           /* istanbul ignore next */
           if(err){ console.log(err); }
@@ -37,14 +42,12 @@ app.get('/',function(req,res){
           foundTags.forEach(function (tag) {
               tags.push(tag.tag);
           });
-
-
           res.render('index',{tags: tags});
       });
 })
 
 //On submiting a search query
-app.post('/',function(req,res){
+app.post('/search',function(req,res){
   var search = req.body.search;
 
   var url = "http://food2fork.com/api/search?key=" + api_key + "&page=" + page + "&q=" + search + "&sort=r";
