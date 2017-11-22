@@ -1,0 +1,28 @@
+body{
+	background-image: url(http://rankandprofit.com/wp-content/uploads/2015/02/white-background-grey-edges.jpg);
+}
+ul{
+	list-style-type: none;
+
+}
+h3{
+	color: black;
+	font-weight: 20;
+	font-size: 1.2em;
+	font-family: 'Vollkorn SC', serif;
+
+
+}
+.recipe_element{
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-family: 'Vollkorn SC', serif;
+}
+.size{
+	font-size: 20px;
+}
+img{
+	height: 300px;
+	width: 500px;
+}
