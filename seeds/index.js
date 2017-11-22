@@ -3,7 +3,8 @@ var Tags     = require('../models/tags');
 
 var seedDB = {};
 
-var defaultTags = ['Apples','Baking powder','Bananas','Berries','Black pepper','Bread crumbs','Breakfasts'];
+var defaultTags = ['Apples','Baking powder','Bananas','Berries','Black pepper','Bread crumbs','Breakfasts','Flour','Oranges',
+'Grapes','Almonds'];
 
 seedDB.addDefaultTags = function() {
     Tags.find({}, function(err, foundTags) {
