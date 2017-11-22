@@ -32,6 +32,12 @@ app.get('/',function(req,res){
   res.render('landing');
 });
 
+app.get('/about',function(req,res){
+  res.render('about');
+});
+
+
+
 //The search url
 app.get('/search',function(req,res){
   Tags.find({}, { _id: 0, tag: 1 }, function(err, foundTags){
