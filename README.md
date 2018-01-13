@@ -1,9 +1,11 @@
-# Quick Recipe.com
+# Quickrecipe.com
 
-A one stop solution for all your food needs.. You need not look anywhere else anymore.
-It searches through the web to give you the best recipe based on the ingredients entered by you.
+A web application built on Node.js that helps users to find recipes with the ingredients they enter.
 
-Happy Cooking....!!!!
+## APIs/Packages Used
 
+* food2fork API
+* Express JS
+* Mongoose
 
-# Made with <3 by team KAS
+## Preview

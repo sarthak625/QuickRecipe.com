@@ -7,12 +7,12 @@ var Tags       = require('./models/tags');
 var mongoose   = require('mongoose');
 var seedData   = require('./seeds/index');
 
-//Connect to mongodb
-mongoose.connect('mongodb://localhost/quickrecipe',{
-  useMongoClient: true
-});
-
-seedData.addDefaultTags();
+// //Connect to mongodb
+// mongoose.connect('mongodb://localhost/quickrecipe',{
+//   useMongoClient: true
+// });
+//
+// seedData.addDefaultTags();
 
 var api_key = 'bf0ea69d36a82e81cdd7ff3537e67913';
 
@@ -40,16 +40,17 @@ app.get('/about',function(req,res){
 
 //The search url
 app.get('/search',function(req,res){
-  Tags.find({}, { _id: 0, tag: 1 }, function(err, foundTags){
-          /* istanbul ignore next */
-          if(err){ console.log(err); }
-          var tags = [];
-          // Retrieve tag from every tag
-          foundTags.forEach(function (tag) {
-              tags.push(tag.tag);
-          });
-          res.render('index',{tags: tags});
-      });
+  // Tags.find({}, { _id: 0, tag: 1 }, function(err, foundTags){
+  //         // /* istanbul ignore next */
+  //         // if(err){ console.log(err); }
+  //         // var tags = [];
+  //         // // Retrieve tag from every tag
+  //         // foundTags.forEach(function (tag) {
+  //         //     tags.push(tag.tag);
+  //         // });
+  //         // res.render('index',{tags: tags});
+  //     });
+      res.render('index');
 })
 
 //On submiting a search query
