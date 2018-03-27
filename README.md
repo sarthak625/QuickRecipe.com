@@ -10,4 +10,4 @@ A web application built on Node.js that helps users to find recipes with the ing
 
 ## Preview
 
-https://rocky-woodland-98514.herokuapp.com/
+https://shielded-springs-45251.herokuapp.com/
